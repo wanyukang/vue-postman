@@ -1,6 +1,6 @@
 # vue-postman
 a single page application for personal practice, based on vue + vuetify + vuerouter + vuex.
-![image](http://github.com/wanyukang/vue-postman/raw/master/screenshot.jpg)
+![image](https://raw.githubusercontent.com/wanyukang/vue-postman/master/screenshot.png)
 
 ## Project setup
 ```

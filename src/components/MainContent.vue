@@ -2,221 +2,188 @@
   <div>
     <v-card>
       <v-container fluid grid-list-xs>
-        <!-- <v-layout row wrap> -->
-          <!-- <v-divider></v-divider> -->
-          <v-flex xs12>
-            <v-tabs
-              v-model="active"
-              dark
-              show-arrows
-              min=300
-              slider-color="red"
-            >
-              <!-- <v-tabs-slider color="red"></v-tabs-slider> -->
-              <v-tab>
-                Get Cookies
-              </v-tab>
-              <!-- <v-tabs-items> -->
-                <v-tab-item>
-                  <v-layout row wrap>
-                  <v-flex xs12>
-                    <v-card flat>
-                      <!-- hide-details -->
-                      <v-text-field
-                        color='red'
-                        label="name"
-                        v-model="theName"
-                      ></v-text-field>
-                        <!-- hide-details -->
-                    </v-card>
-                  </v-flex>
-
-                  <!-- <v-card flat> -->
-                    <v-flex xs1>
-                      <v-select
-                        color='red'
-                        :items="requestType"
-                        label="Type"
-                        outline
-                      ></v-select>
-                    </v-flex>
-
-                    <v-flex xs9>
-                      <v-text-field
-                        color='red'
-                        label="Url"
-                        outline
-                        hide-details
-                      ></v-text-field>
-                    </v-flex>
-
-                    <v-flex xs1>
-                      <v-btn 
-                        color="info"
-                        large
-                      >
-                        Send
-                      </v-btn>
-                    </v-flex>
-                    
-                    <v-flex xs1>
-                      <v-btn 
-                        light
-                        depressed
-                        large
-                      >
-                        Save
-                      </v-btn>
-                    </v-flex>
-
-                    <v-flex xs12>
-                      <v-tabs
-                        v-model="active"
-                        dark
-                        show-arrows
-                        min=300
-                        slider-color="red"
-                      >
-                        <v-tab>
-                          Params
-                        </v-tab>
-                          <v-tab-item>
-                            <v-data-table
-                              disable-initial-sort
-                              v-model="selected"
-                              :headers="headers"
-                              :items="desserts"
-                              item-key="name"
-                              hide-actions
-                              select-all
-                              class="elevation-1"
-                            >
-                              <template slot="items" slot-scope="props">
-                                <td>
-                                  <v-checkbox
-                                    v-model="props.selected"
-                                    color='red'
-                                    hide-details
-                                  ></v-checkbox>
-                                </td>
-                                 <!-- class="text-xs-right" -->
-                                <td>
-                                  <v-text-field
-                                    v-model="props.item.key"
-                                    color='red'
-                                    label=""
-                                    single-line
-                                    outline
-                                    hide-details
-                                  >
-                                  </v-text-field>
-                                </td>
-                                <td>
-                                  <v-text-field
-                                    v-model="props.item.value"
-                                    color='red'
-                                    label=""
-                                    single-line
-                                    outline
-                                    hide-details
-                                  >
-                                  </v-text-field>
-                                </td>
-                                <td>
-                                  <v-text-field
-                                    v-model="props.item.description"
-                                    color='red'
-                                    label=""
-                                    single-line
-                                    outline
-                                    hide-details
-                                  >
-                                  </v-text-field>
-                                </td>
-                              </template>
-                            </v-data-table>
-                          </v-tab-item>
-
-                        <v-tab>
-                          Authorization
-                        </v-tab>
-                          <v-tab-item>
-                          </v-tab-item>
-
-                        <v-tab>
-                          Headers
-                        </v-tab>
-                          <v-tab-item>
-                          </v-tab-item>
-
-                      </v-tabs>
-                    </v-flex>
-                  <!-- </v-card> -->
-
-                </v-layout>
-                </v-tab-item>
-              <!-- </v-tabs-items> -->
-
-              <v-tab>
-              Set Cookies
-              </v-tab>
-              <!-- <v-tabs-items> -->
-                <v-tab-item>
+        <v-flex xs12>
+          <v-tabs
+            v-model="active"
+            dark
+            show-arrows
+            min=300
+            slider-color="red"
+          >
+            <!-- <v-tabs-slider color="red"></v-tabs-slider> -->
+            <v-tab>
+              Get Cookies
+            </v-tab>
+            <!-- <v-tabs-items> -->
+              <v-tab-item>
+                <v-layout row wrap>
+                <v-flex xs12>
                   <v-card flat>
+                    <!-- hide-details -->
                     <v-text-field
                       color='red'
-                      hide-details
                       label="name"
-                      v-model="theName1"
+                      v-model="theName"
                     ></v-text-field>
+                      <!-- hide-details -->
                   </v-card>
-                </v-tab-item>
-              <!-- </v-tabs-items> -->
-            </v-tabs>
-            
-          </v-flex>
+                </v-flex>
 
-          <v-flex xs12>
-            
-          </v-flex>
-        <!-- </v-layout> -->
+                <!-- <v-card flat> -->
+                  <v-flex xs1>
+                    <v-select
+                      color='red'
+                      :items="requestType"
+                      label="Type"
+                      outline
+                    ></v-select>
+                  </v-flex>
+
+                  <v-flex xs9>
+                    <v-text-field
+                      color='red'
+                      label="Url"
+                      outline
+                      hide-details
+                    ></v-text-field>
+                  </v-flex>
+
+                  <v-flex xs1>
+                    <v-btn 
+                      color="info"
+                      large
+                    >
+                      Send
+                    </v-btn>
+                  </v-flex>
+                  
+                  <v-flex xs1>
+                    <v-btn 
+                      light
+                      depressed
+                      large
+                    >
+                      Save
+                    </v-btn>
+                  </v-flex>
+
+                  <v-flex xs12>
+                    <v-tabs
+                      v-model="active"
+                      dark
+                      show-arrows
+                      min=300
+                      slider-color="red"
+                    >
+                      <v-tab>
+                        Params
+                      </v-tab>
+                        <v-tab-item>
+                          <v-data-table
+                            disable-initial-sort
+                            v-model="selected"
+                            :headers="headers"
+                            :items="desserts"
+                            item-key="name"
+                            hide-actions
+                            select-all
+                            class="elevation-1"
+                          >
+                            <template slot="items" slot-scope="props">
+                              <td>
+                                <v-checkbox
+                                  v-model="props.selected"
+                                  color='red'
+                                  hide-details
+                                ></v-checkbox>
+                              </td>
+                                <!-- class="text-xs-right" -->
+                              <td>
+                                <v-text-field
+                                  v-model="props.item.key"
+                                  color='red'
+                                  label=""
+                                  single-line
+                                  outline
+                                  hide-details
+                                >
+                                </v-text-field>
+                              </td>
+                              <td>
+                                <v-text-field
+                                  v-model="props.item.value"
+                                  color='red'
+                                  label=""
+                                  single-line
+                                  outline
+                                  hide-details
+                                >
+                                </v-text-field>
+                              </td>
+                              <td>
+                                <v-text-field
+                                  v-model="props.item.description"
+                                  color='red'
+                                  label=""
+                                  single-line
+                                  outline
+                                  hide-details
+                                >
+                                </v-text-field>
+                              </td>
+                            </template>
+                          </v-data-table>
+                        </v-tab-item>
+
+                      <v-tab>
+                        Authorization
+                      </v-tab>
+                        <v-tab-item>
+                        </v-tab-item>
+
+                      <v-tab>
+                        Headers
+                      </v-tab>
+                        <v-tab-item>
+                        </v-tab-item>
+
+                    </v-tabs>
+                  </v-flex>
+                <!-- </v-card> -->
+
+              </v-layout>
+              </v-tab-item>
+            <!-- </v-tabs-items> -->
+
+            <v-tab>
+            Set Cookies
+            </v-tab>
+            <!-- <v-tabs-items> -->
+              <v-tab-item>
+                <v-card flat>
+                  <v-text-field
+                    color='red'
+                    hide-details
+                    label="name"
+                    v-model="theName1"
+                  ></v-text-field>
+                </v-card>
+              </v-tab-item>
+            <!-- </v-tabs-items> -->
+          </v-tabs>
+          
+        </v-flex>
+        <v-flex xs12>
+        </v-flex>
       </v-container>
-      
-      
-      <!-- <chrome-tabs
-        ref="tabs"
-        v-model="tabs"
-        :tab-id.sync="tabId"
-        :default-tab="{ title: 'Default tab' }"
-      >
-      </chrome-tabs> -->
-      <!-- <p>
-        <button @click="toggleDarkTheme">Toggle dark theme</button> &nbsp;
-        <button @click="addTab">Add new tab</button> &nbsp;
-        <button @click="removeTab">Remove current tab</button>
-      </p> -->
-    
-      <!-- <v-card-text>
-        <v-layout row wrap>
-          <v-flex xs6>
-            <v-select
-              label='优先级test'
-            ></v-select>
-          </v-flex>
-        </v-layout>
-      </v-card-text> -->
     </v-card>
   </div>
 </template>
 
 <script>
-  // import 'vue-chrome-tabs/dist/vue-chrome-tabs.css'
-  // import { ChromeTabs } from 'vue-chrome-tabs/dist/vue-chrome-tabs.common'
-
   export default {
     name: 'Main',
     components: {
-      // 'chrome-tabs': ChromeTabs
     },
     data: () => ({
       theName: 'Get Cookies',
@@ -280,49 +247,15 @@
           key: 'Eclair',
           value: 262,
           description: '7%'
-        },
-        {
-          key: 'Cupcake',
-          value: 4.3,
-          description: '8%'
-        },
-        {
-          key: 'Gingerbread',
-          value: 356,
-          description: '16%'
-        },
-        {
-          key: 'Jelly bean',
-          value: 375,
-          description: '10%'
         }
       ]
     }),
     mounted () {
-      // this.toggleDarkTheme()
     },
     created () {
 
     },
     methods: {
-      // toggleDarkTheme: function () {
-      //   if (this.$refs.tabs.$el.classList.contains('chrome-tabs-dark-theme')) {
-      //     document.documentElement.classList.remove('dark-theme')
-      //     this.$refs.tabs.$el.classList.remove('chrome-tabs-dark-theme')
-      //   } else {
-      //     document.documentElement.classList.add('dark-theme')
-      //     this.$refs.tabs.$el.classList.add('chrome-tabs-dark-theme')
-      //   }
-      // },
-      // addTab () {
-      //   this.$refs.tabs.addTab({
-      //     title: 'New Tab',
-      //     favicon: 'default-favicon.png'
-      //   })
-      // },
-      // removeTab () {
-      //   this.$refs.tabs.removeTab(this.$refs.tabs.currentTab)
-      // }
     },
     props: {
       source: String,

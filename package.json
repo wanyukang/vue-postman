@@ -12,7 +12,7 @@
     "vue-chrome-tabs": "^0.1.2",
     "vue-router": "^3.0.1",
     "vuetify": "^1.5.20",
-    "vuex": "^3.0.1"
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.1.1",
